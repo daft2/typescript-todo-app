@@ -7,11 +7,9 @@ type Todo = Readonly<{
   done: boolean
 }>
 
-type CompletedTodo = Readonly<{
-  id: number
-  text: string
-  done: true
-}>
+type CompletedTodo = Todo & {
+  readonly done: true
+}
 
 const item: Todo = {
   id: 1,
