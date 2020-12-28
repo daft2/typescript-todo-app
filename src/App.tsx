@@ -42,6 +42,15 @@ function completeAll(todos: readonly Todo[]): CompletedTodo[] {
   }))
 }
 
+function placeToString(place: Place): string{
+  if (place === 'home') {
+    return "🏠 Home"
+  }else if (place === 'work') {
+    return "💼 Work"
+  }else {
+    return '📍' + place.custom
+  }
+}
 
 function App() {
   return (
